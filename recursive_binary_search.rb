@@ -6,6 +6,13 @@
   # END CASE: Find the Element or Don't Find the Element
       # (where an end case, in this sense, is the case in which you'll stop the while loop)
 
+  # PROS:
+    # takes up less space in the computer's memory
+    # pretty readible & easy to grasp
+
+  # CONS:
+    # not as beautiful
+
 
 def binary_search_while_loop(array, desired_num)
 
@@ -14,10 +21,6 @@ def binary_search_while_loop(array, desired_num)
 
   while start_index <= end_index
     mid_index = (start_index + end_index) / 2
-
-    puts "Start: #{start_index}"
-    puts "End: #{end_index}"
-    puts "Mid: #{mid_index}"
 
     if array[mid_index] == desired_num
       return mid_index
@@ -53,9 +56,15 @@ puts
   # BASE CASE(S): find the number; number doesn't exist
   # PERSISTENT INFORMATION: the array which hasn't been ruled out, the target number
 
-# This example just returns true or false based on whether or not the element is found.
-# It is destructive because we destroy the method (by reducing its size) as we search
-# through the array.
+  # This example just returns true or false based on whether or not the element is found.
+  # It is destructive because we destroy the method (by reducing its size) as we search
+  # through the array.
+
+  # PROS:
+    # reusing your own code is beautiful
+  # CONS:
+    # takes up more space in the computer's memory
+    # this method is destructive, which isn't very positive
 
 
 def binary_search_recursive_destructive(array, target)
@@ -101,14 +110,21 @@ puts
 # are defaulted to be 0 and the last index of the array so that the user doens't have to
 # pass that information in.
 
+  # PROS:
+    # really beautiful & short!
+    # is not destructive!
+    # very readible
+  # CONS:
+    # takes up more space in the computer's memory
+
 
 def binary_search_recursive_non_destructive(array, desired_num, start_index = 0, end_index = array.length - 1)
   mid_index = (start_index + end_index) / 2
 
-  return -1 if start_index > end_index
+  return -1 if start_index > end_index # BASE CASE #1
 
   if array[mid_index] == desired_num
-    return mid_index
+    return mid_index # BASE CASE #2
   elsif array[mid_index] > desired_num
     end_index = mid_index - 1
   elsif array[mid_index] < desired_num
