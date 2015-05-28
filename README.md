@@ -4,3 +4,5 @@ This is a repository for any materials I generate through coaching at Dev Bootca
 
 ##Breakout Sessions
 [Recursive Binary Search](https://github.com/CariWest/Coaching/blob/master/recursive_binary_search.rb)
+[MVC Todo](https://github.com/CariWest/Coaching/blob/master/todo)
+[Using an Arguments Hash](https://github.com/CariWest/Coaching/blob/master/examples/initialize_with_args.rb)
