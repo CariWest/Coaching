@@ -9,6 +9,3 @@ This is a repository for any materials I generate sometimes when I write I have 
 
 ##Related
   * [Walt's Awesome TA Repo](https://github.com/zimmermanw84/DBC-TA)
-
-##Nathan Park
-  I am writing here and also here
